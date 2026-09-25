@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Heart Rate Monitor" android:textSize="28sp" android:textStyle="bold"
+            android:gravity="center" android:layout_marginBottom="24dp"/>
+
+        <TextView android:id="@+id/txtBpm" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="❤️ -- BPM" android:textSize="42sp" android:textStyle="bold" android:gravity="center"/>
+
+        <TextView android:id="@+id/txtHrStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Waiting for hardware..." android:textSize="19sp" android:gravity="center" android:layout_marginTop="16dp"/>
+
+        <TextView android:id="@+id/txtCountdown" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="" android:textSize="22sp" android:textStyle="bold" android:gravity="center" android:layout_marginTop="20dp"/>
+
+        <Button android:id="@+id/btnCancelAlert" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="CANCEL EMERGENCY ALERT" android:textSize="18sp" android:layout_marginTop="12dp"/>
+
+        <Button android:id="@+id/btnDemoNormal" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Demo Normal (82 BPM)" android:layout_marginTop="24dp"/>
+
+        <Button android:id="@+id/btnDemoAbnormal" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Demo Abnormal (150 → 155 → 160 BPM)" android:layout_marginTop="10dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Automatic alert flow: sustained abnormal pattern → 10-second cancellation window → automatic SMS to the saved trusted contact. The real MAX30100 + ESP32 reading will replace this demo after hardware integration."
+            android:textSize="15sp" android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

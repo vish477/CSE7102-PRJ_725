@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ===================================================== -->
+    <!-- LOCATION PERMISSIONS                                  -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+
+    <!-- ===================================================== -->
+    <!-- SMS / PHONE PERMISSIONS                               -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.SEND_SMS" />
+
+    <uses-permission
+        android:name="android.permission.CALL_PHONE" />
+
+
+    <!-- ===================================================== -->
+    <!-- BLUETOOTH PERMISSIONS                                 -->
+    <!-- ===================================================== -->
+
+    <!-- Android 11 and below -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN" />
+
+
+    <!-- Android 12+ -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT" />
+
+
+    <!-- ===================================================== -->
+    <!-- NOTIFICATION PERMISSION                               -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS" />
+
+
+    <!-- ===================================================== -->
+    <!-- FOREGROUND SERVICE                                    -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+
+
+    <!-- ===================================================== -->
+    <!-- INTERNET                                              -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+
+    <!-- ===================================================== -->
+    <!-- APPLICATION                                           -->
+    <!-- ===================================================== -->
+
+    <application
+        android:allowBackup="true"
+        android:label="GeoSafe"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GeoSafe">
+
+
+        <!-- ================================================= -->
+        <!-- EMERGENCY ACTIVITY                                -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".EmergencyActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- INCIDENT ACTIVITY                                 -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".IncidentActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- ZONES ACTIVITY                                    -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".ZonesActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- BLE FOREGROUND SERVICE                             -->
+        <!-- ================================================= -->
+
+        <service
+            android:name=".BleService"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
+
+        <receiver
+            android:name=".GeofenceBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- GPS ACTIVITY                                      -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".GpsActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- HEART RATE ACTIVITY                               -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".HeartRateActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- DEVICE CONNECTION ACTIVITY                        -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".DeviceConnectionActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- TRUSTED CONTACTS ACTIVITY                         -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".TrustedContactsActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- MAIN BLE / SENSOR ACTIVITY                        -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- LOGIN ACTIVITY                                    -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+
+        <!-- ================================================= -->
+        <!-- SPLASH / LAUNCHER ACTIVITY                        -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+
+    </application>
+
+</manifest>

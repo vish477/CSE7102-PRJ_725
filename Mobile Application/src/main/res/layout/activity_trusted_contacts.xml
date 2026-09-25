@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trusted Contacts"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add people who should receive an emergency alert."
+            android:textColor="#AAAAAA"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginBottom="25dp"/>
+
+        <EditText
+            android:id="@+id/contactNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Contact Name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:inputType="textPersonName"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/contactNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:hint="Mobile Number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:inputType="phone"
+            android:padding="15dp"/>
+
+        <Button
+            android:id="@+id/addContactButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:text="ADD TRUSTED CONTACT"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saved Contacts"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/contactsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <!-- Continue to Monitoring -->
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="CONTINUE TO MONITORING"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</ScrollView>

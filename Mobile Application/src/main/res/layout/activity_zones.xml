@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="20dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="High-Risk Geo-Fence" android:textSize="28sp" android:textStyle="bold"
+        android:gravity="center" android:layout_marginBottom="20dp"/>
+    <EditText android:id="@+id/zoneName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Zone name"/>
+    <EditText android:id="@+id/zoneLat" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Latitude" android:inputType="numberDecimal|numberSigned"/>
+    <EditText android:id="@+id/zoneLon" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Longitude" android:inputType="numberDecimal|numberSigned"/>
+    <EditText android:id="@+id/zoneRadius" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Radius in metres" android:inputType="numberDecimal"/>
+    <Button android:id="@+id/btnSaveZone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Risk Zone"/>
+    <TextView android:id="@+id/zoneResult" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textSize="18sp" android:layout_marginTop="20dp"/>
+</LinearLayout>
