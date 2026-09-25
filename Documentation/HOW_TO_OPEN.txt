@@ -1,0 +1,1 @@
+Extract GeoSafe_Complete.zip and open the GeoSafe folder in Android Studio. Let Android Studio download/sync Gradle. Then Run.

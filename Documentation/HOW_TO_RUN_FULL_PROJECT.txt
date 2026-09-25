@@ -1,0 +1,36 @@
+GEOSAFE FULL PROJECT - BEGINNER STEPS
+
+A) ANDROID APP
+1. Open the GeoSafe folder in Android Studio.
+2. Let Gradle Sync finish.
+3. Build > Make Project.
+4. Run on a real Android phone.
+5. Login: admin / 1234
+6. Trusted Contacts -> save a real test number.
+7. Device Connection -> Connect / Scan ESP32.
+8. Allow Nearby Devices, Notifications, Location and SMS permissions.
+
+B) ESP32
+1. Open ESP32_GeoSafe_Firmware/GeoSafe_ESP32.ino in Arduino IDE.
+2. Install MAX30100lib and TinyGPSPlus.
+3. Select ESP32 Dev Module and the correct COM port.
+4. Upload.
+5. Open Serial Monitor at 115200.
+6. The BLE device name is GeoSafe-ESP32.
+7. Put finger on MAX30100.
+8. Wait for valid BPM and GPS.
+
+C) AUTOMATIC ALERT
+Three consecutive BPM values >=150 trigger the 10-second warning.
+If the user does not cancel, the phone sends the saved trusted contact an SMS automatically.
+
+D) SERVER / GUARDIAN
+1. Install Node.js 18+.
+2. In GeoSafe_Server run npm install.
+3. Run npm start.
+4. Open http://localhost:3000
+
+E) DEMO
+Normal: around 70-100 BPM.
+Possible distress demo: sustained 150 -> 155 -> 160 BPM.
+The system is not a medical diagnostic device.
